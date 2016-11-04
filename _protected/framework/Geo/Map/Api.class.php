@@ -449,7 +449,7 @@ class Api
      */
     public function geocoding($address)
     {
-        $url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . urlencode($address) . '&amp;sensor=true&amp;key=' . $this->key;
+        $url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . urlencode($address) . '&amp;key=' . $this->key;
 
         if (function_exists('curl_init')) {
             $data = $this->getContent($url);
